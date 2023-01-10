@@ -1,0 +1,67 @@
+<div class="card">
+  <div class="card-header">
+    <h5 class="title text-center">{{ getTitle() }}</h5>
+  </div>
+  <div class="card-body">
+    <form (submit)="saveCreditCard()" [formGroup]="creditCardForm" class="grid">
+      <div class="input-group full-width">
+        <span class="input-group-text" id="cardholder-icon">
+          <i [ngClass]="formControlIconClass('cardholder')" class="fa-solid fa-user"></i>
+        </span>
+        <input
+          formControlName="cardholder"
+          type="text"
+          class="form-control"
+          placeholder="Titular"
+          aria-label="cardholder"
+          aria-describedby="cardholder-icon"
+        />
+      </div>
+      <div class="input-group full-width">
+        <span class="input-group-text" id="card-number-icon">
+          <i [ngClass]="formControlIconClass('cardNumber')" class="fa-solid fa-credit-card"></i>
+        </span>
+        <input
+          formControlName="cardNumber"
+          type="text"
+          maxlength="16"
+          placeholder="Numero de Tarjeta"
+          aria-label="card number"
+          aria-describedby="card-number-icon"
+          class="form-control"
+        />
+      </div>
+      <div class="input-group">
+        <span class="input-group-text" id="date-icon">
+          <i [ngClass]="formControlIconClass('expirationDate')" class="fa-solid fa-calendar"></i>
+        </span>
+        <input
+          formControlName="expirationDate"
+          type="text"
+          maxlength="5"
+          placeholder="MM/YY"
+          aria-label="expiration date"
+          aria-describedby="date-icon"
+          class="form-control"
+        />
+      </div>
+      <div class="input-group">
+        <span class="input-group-text" id="password-icon">
+          <i [ngClass]="formControlIconClass('cvv')" class="fa-solid fa-key"></i>
+        </span>
+        <input
+          formControlName="cvv"
+          type="password"
+          maxlength="3"
+          placeholder="CVV"
+          aria-label="cvv"
+          aria-describedby="password-icon"
+          class="form-control"
+        />
+      </div>
+      <button [disabled]="creditCardForm.invalid" class="btn btn-success full-width" type="submit">
+        ACEPTAR <i class="fa-solid fa-floppy-disk"></i>
+      </button>
+    </form>
+  </div>
+</div>

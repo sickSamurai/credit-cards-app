@@ -1,0 +1,26 @@
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  padding: 2%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid {
+  width: 70vw;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  justify-content: space-around;
+  align-items: center;
+  flex-grow: 1;
+  gap: 16px;
+}
+
+.card {
+  text-align: center;
+  padding: 0% 1%;
+}

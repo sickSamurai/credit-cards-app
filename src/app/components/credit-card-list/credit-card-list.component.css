@@ -1,0 +1,16 @@
+.table-container {
+  height: 50vh;
+  overflow: auto;
+}
+
+.table {
+  table-layout: auto;
+  text-align: center;
+}
+
+.no-credit-cards-container {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

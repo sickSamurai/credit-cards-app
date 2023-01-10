@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "credit-cards-app-dd064": {
+      "hosting": {
+        "credit-cards-app": [
+          "credit-cards-app-dd064"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "credit-cards-app-dd064"
+  }
+}

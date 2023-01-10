@@ -25,7 +25,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/ngx-toastr/toastr.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
           },
@@ -91,8 +93,21 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "credit-cards-app:build:production",
+            "firebaseProject": "credit-cards-app-dd064",
+            "firebaseHostingSite": "credit-cards-app-dd064"
+          }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "096e6dbc-eb9c-41c9-9825-5c8ca3c1e702"
   }
 }

@@ -1,0 +1,25 @@
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+}
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.green-icon {
+  color: #4caf50;
+}
+
+.red-icon {
+  color: #f44336;
+}
+
+.full-width {
+  grid-column: span 2;
+}

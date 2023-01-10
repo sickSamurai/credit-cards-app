@@ -1,0 +1,15 @@
+.fa-trash {
+  color: #f44336;
+}
+
+.btn-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+i {
+  cursor: pointer;
+}

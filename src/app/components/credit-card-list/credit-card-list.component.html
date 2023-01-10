@@ -1,0 +1,25 @@
+<div class="card">
+  <div class="card-header">
+    <h4 class="title text-center">Listado de Tarjetas</h4>
+  </div>
+  <div *ngIf="creditCardsExists(); else noCreditCards" class="table-container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Titular</th>
+          <th>Numero</th>
+          <th>Expiración</th>
+          <th class="text-center">Acciones</th>
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+        <tr *ngFor="let creditCard of creditCards" credit-card-item [creditCard]="creditCard"></tr>
+      </tbody>
+    </table>
+  </div>
+  <ng-template #noCreditCards>
+    <div class="no-credit-cards-container">
+      <h4 class="title text-center">No hay tarjetas creadas actualmente</h4>
+    </div>
+  </ng-template>
+</div>
